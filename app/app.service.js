@@ -1,9 +1,28 @@
 (function() {
 
-  var app = angular.module('meganote', ['ngResource']);
+  angular.module('meganote', ['ngResource'])
+    .factory('AppService', AppService);
 
-  app.factory('AppService', function($resource) {
-    return $resource('',{});
-  });
+    AppService.$inject = ['$http'];
+
+    function AppService ($http) {
+    const apiURI = `http://bluitx.herokuapp.com/posts.json`;
+
+    const service = {
+      getPosts: getPosts
+    }
+
+    return service;
+
+    function getPosts(){
+      const posts = $http.get(apiURI);
+      //$resource(,{});
+      return posts;
+    }
+
+    ///
+
+
+  }
 
 })();

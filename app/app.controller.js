@@ -2,8 +2,10 @@
   angular.module('meganote')
     .controller('AppController', AppController);
 
-  AppController.$inject = ['$scope'];
-  function AppController($scope) {
-    $scope.items = ["a", "b", "c"];
+  AppController.$inject = ['$scope', 'AppService'];
+  function AppController($scope, AppService) {
+    AppService.getPosts().then( function(items) {
+      $scope.items = items;
+    });
   }
 }
