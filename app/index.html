@@ -4,54 +4,49 @@
 <!--[if IE 8]>         <html lang="en" ng-app="meganote" class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!-->
 <html lang="en" ng-app="meganote" class="no-js"> <!--<![endif]-->
-  <head>
+<head>
+<body>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" href="/content/app.css" charset="utf-8">
 
-    <img
-    src="https://pbs.twimg.com/profile_images/662759176419020800/LwrBcXs7.png"
-    align="middle"
-    alt="HOT"
-    style="width:512px;height:512px;">
+  <img
+  src="https://pbs.twimg.com/profile_images/662759176419020800/LwrBcXs7.png"
+  align="middle"
+  alt="HOT"
+  style="width:512px;height:512px;">
 
-    <div id="bd">
-      <div class="box-outer" id="announce">
-        <div class="box-inner">
-          <div class="boxbar">
-            <h2>What is DaveyChan?</h2>
-            <a id="close-announce" href="#" class="closebutton"></a>
-          </div>
-          <div class="boxcontent">
-            <p>DaveyChan is a barely functioning non-image-based bulletin board
-            where you can't really do anything but it is a huge ripoff of
-            the superior site <a href="http://www.4chan.org/">4chan</a></p>
-            <br/>
-            <p>Be sure to familiarize yourself with the <a href="">Rules</a> before posting, and read the <a href="" title="Frequently Asked Questions">FAQ</a> but the links are fake so it's whatever</p>
-          </div>
+  <div id="bd">
+    <div class="box-outer" id="announce">
+      <div class="box-inner">
+        <div class="boxbar">
+          <h2>What is DaveyChan?</h2>
+          <a id="close-announce" href="#" class="closebutton"></a>
+        </div>
+        <div class="boxcontent">
+          <p>DaveyChan is a barely functioning non-image-based bulletin board
+          where you can't really do anything but it is a huge ripoff of
+          the superior site <a href="http://www.4chan.org/">4chan</a></p>
+          <br/>
+          <p>Be sure to familiarize yourself with the <a href="">Rules</a> before posting, and read the <a href="" title="Frequently Asked Questions">FAQ</a> but the links are fake so it's whatever</p>
         </div>
       </div>
     </div>
+  </div>
 
-    <body>
-    <div class="box-outer top-box" id="boards">
+    <div class="box-outer top-box" id="popular-threads">
       <div class="box-inner">
         <div class="boxbar">
           <h2>Boards</h2>
-          <meta charset="utf-8">
-          <meta http-equiv="X-UA-Compatible" content="IE=edge">
-          <title ng-bind="$state.current.name + ' - Meganote'">Megannote</title>
-          <link rel="stylesheet" href="/content/app.css" charset="utf-8">
           <div ng-controller="AppController">
             <div class="boxcontent">
               <div class="column">
               <h3 style="text-decoration: underline; display: inline;">Bootcamp Culture</h3>
-                <ul cl ass="list">
+                <ul class="list">
                   <li><a href="" class="boardlink" title="Davey">Davey &amp; Manga</a></li>
                   <li><a href="" class="boardlink" title="Davey/Cute">Davey/Cute</a></li>
                   <li><a href="" class="boardlink" title="Davey/Wallpapers">Davey/Wallpapers</a></li>
                   <li><a href="" class="boardlink" title="Fitness">Fitness</a></li>
-                  <!-- <li class="list-item" ng-repeat="item in items">
-                    {{ item }} -->
-                    <!-- {{ item.id }} <a href="{{ item.link_url }}"> {{ item.title }} </a> -->
-                  <!-- </li> -->
                 </ul>
               </div>
             </div>
@@ -59,6 +54,43 @@
         </div>
       </div>
     </div>
+
+
+    <div class="box-outer top-box" id="popular-threads">
+      <div class="box-inner">
+        <div class="boxbar">
+          <h2>Popular Threads</h2>
+          <div class="boxcontent">
+            <div ng-controller="AppController">
+              <div class="davey-threads">
+                <ul class="list2">
+                  <li class="list-item2" ng-repeat="item in items">
+                    <!-- {{ item.id }} <a href="{{ item.link_url }}"> {{ item.title }} </a> -->
+                    <div class="davey-thread">
+                      <div class="davey-board">
+                        <h3>Board Name</h3>
+                        <p>
+                          <a href="{{ item.link_url }}">
+                          <img
+                          src="https://learn.elevenfifty.org/wp-content/uploads/2015/05/Davey_v2.jpg"
+                          align="middle"
+                          alt="HOT"
+                          style="width:60px;height:60px;">
+                          </a>
+                          {{ item.title }}: {{ item.body }}
+
+                        </p>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </head>
 
 
