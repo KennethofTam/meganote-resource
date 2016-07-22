@@ -24,4 +24,4 @@ cd meganote-resource
 npm start
 ```
 > **Note:** You can change the port it runs on or any further concerns of
- npm start in the package.json file
+ `npm start` in the package.json file

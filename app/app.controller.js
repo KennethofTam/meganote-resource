@@ -4,8 +4,13 @@
 
   AppController.$inject = ['$scope', 'AppService'];
   function AppController($scope, AppService) {
-    AppService.getPosts().then( function(items) {
-      $scope.items = items;
-    });
+    // AppService.get().$promise.then(
+    //    items => {
+    //      console.log(items);
+    //     // $scope.items = items;
+    // });
+
+    $scope.items = AppService.query();
+
   }
 }

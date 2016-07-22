@@ -2,22 +2,66 @@
 <!--[if lt IE 7]>      <html lang="en" ng-app="meganote" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html lang="en" ng-app="meganote" class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html lang="en" ng-app="meganote" class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html lang="en" ng-app="meganote" class="no-js"> <!--<![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en" ng-app="meganote" class="no-js"> <!--<![endif]-->
   <head>
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title ng-bind="$state.current.name + ' - Meganote'">Meganote</title>
-    <div ng-controller="AppController">
-      <ul class="list">
-        <li class="list-item" ng-repeat="item in items">
-          {{item}}
-        </li>
-      </ul>
+    <img
+    src="https://pbs.twimg.com/profile_images/662759176419020800/LwrBcXs7.png"
+    align="middle"
+    alt="HOT"
+    style="width:512px;height:512px;">
+
+    <div id="bd">
+      <div class="box-outer" id="announce">
+        <div class="box-inner">
+          <div class="boxbar">
+            <h2>What is DaveyChan?</h2>
+            <a id="close-announce" href="#" class="closebutton"></a>
+          </div>
+          <div class="boxcontent">
+            <p>DaveyChan is a barely functioning non-image-based bulletin board
+            where you can't really do anything but it is a huge ripoff of
+            the superior site <a href="http://www.4chan.org/">4chan</a></p>
+            <br/>
+            <p>Be sure to familiarize yourself with the <a href="">Rules</a> before posting, and read the <a href="" title="Frequently Asked Questions">FAQ</a> but the links are fake so it's whatever</p>
+          </div>
+        </div>
+      </div>
     </div>
-    <link rel="stylesheet" href="/content/app.css" charset="utf-8">
+
+    <body>
+    <div class="box-outer top-box" id="boards">
+      <div class="box-inner">
+        <div class="boxbar">
+          <h2>Boards</h2>
+          <meta charset="utf-8">
+          <meta http-equiv="X-UA-Compatible" content="IE=edge">
+          <title ng-bind="$state.current.name + ' - Meganote'">Megannote</title>
+          <link rel="stylesheet" href="/content/app.css" charset="utf-8">
+          <div ng-controller="AppController">
+            <div class="boxcontent">
+              <div class="column">
+              <h3 style="text-decoration: underline; display: inline;">Bootcamp Culture</h3>
+                <ul cl ass="list">
+                  <li><a href="" class="boardlink" title="Davey">Davey &amp; Manga</a></li>
+                  <li><a href="" class="boardlink" title="Davey/Cute">Davey/Cute</a></li>
+                  <li><a href="" class="boardlink" title="Davey/Wallpapers">Davey/Wallpapers</a></li>
+                  <li><a href="" class="boardlink" title="Fitness">Fitness</a></li>
+                  <!-- <li class="list-item" ng-repeat="item in items">
+                    {{ item }} -->
+                    <!-- {{ item.id }} <a href="{{ item.link_url }}"> {{ item.title }} </a> -->
+                  <!-- </li> -->
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </head>
-  <body>
+
+
 
     <div ui-view></div>
 
