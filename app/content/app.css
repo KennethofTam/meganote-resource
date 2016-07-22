@@ -1,5 +1,4 @@
-ul
-{
+ul {
     list-style-type: none;
 }
 
@@ -29,9 +28,40 @@ img {
     margin-left: auto;
     margin-right: auto
 }
-
+/*.davey-board {
+    font-weight: bold;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+    white-space: nowrap;
+    margin-bottom: 5px;
+}*/
 
 /* ///////////// */
+
+#announce .boxcontent {
+    line-height: 1.5em;
+}
+
+#announce em {
+    font-style: italic;
+}
+
+#announce strong {
+    font-weight: bold;
+}
+
+#announce .boxbar {
+    background: #800;
+    color: #fff;
+}
+
+#announce {
+    background: #fff;
+    color: #000;
+}
+
+
 .box-outer {
     border: 1px solid;
     zoom:100%;margin-bottom: .5em;
@@ -73,3 +103,25 @@ h3 {
     font-size: 100%;
     font-weight: bold;
 }
+html {
+    background: #ffe;
+}
+
+body {
+    background: #ffe url('http://s.4cdn.org/image/fp/fade.png') top repeat-x;
+    color: #800;
+}
+
+.boxbar {
+    background: #fca;
+    color: #800;
+}
+.top-box {
+    background: #fff;
+}
+
+.boardlink {
+        display: inline-block;
+        font-size: 1.2em;
+        padding: 5px 10px 5px 0;
+    }
