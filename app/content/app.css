@@ -2,8 +2,16 @@ ul {
     list-style-type: none;
 }
 
+h4 {
+  font-family: arial,helvetica,sans-serif;
+  font-size: 40pt;
+  text-align: center;
+}
+
 #davey-threads {
     text-align: center;
+    display: inline-block;
+    vertical-align: top;
 }
 
 .davey-thread {
@@ -23,10 +31,42 @@ ul {
     display: inline;
 }
 
-img {
+
+#davey-image {
     display: block;
     margin-left: auto;
     margin-right: auto
+}
+
+/**/
+.davey-header {
+  margin: 20px 20px 0 0;
+  overflow: auto
+}
+.clover {
+  float:left;
+}
+.clover img {
+  float:left;
+}
+.davey-content {
+  margin-left: 210px
+}
+.davey-title{
+  font-size: 200%
+}
+
+
+
+
+/**/
+
+.caption {
+  display: block;
+  text-align:
+}
+#caption1 {
+  font-weight: bold;
 }
 /*.davey-board {
     font-weight: bold;
@@ -38,7 +78,6 @@ img {
 }*/
 
 /* ///////////// */
-
 #announce .boxcontent {
     line-height: 1.5em;
 }
